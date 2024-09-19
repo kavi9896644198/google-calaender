@@ -9,7 +9,9 @@ get_header();
 <main id="scisco-main-wrapper">
 <?php if((is_user_logged_in())):  
 
-
+define('CLIENT_REDIRECT_URL', 'https://cannaconnects.io/my-dashboard/'); 
+define('CLIENT_SECRET', ''); 
+define('CLIENT_ID', '');
 
 $login_url = 'https://accounts.google.com/o/oauth2/auth?scope=' . urlencode('https://www.googleapis.com/auth/calendar') . '&redirect_uri=' . urlencode(CLIENT_REDIRECT_URL) . '&response_type=code&client_id=' . CLIENT_ID . '&access_type=online';
 require_once get_stylesheet_directory().'/google-calendar-api.php';
